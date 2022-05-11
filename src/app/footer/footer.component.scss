@@ -1,5 +1,65 @@
 .container{
   width: 100%;
   height: 100%;
-  background-color: #0d300d;
+  background-color: #274035;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.container .top{
+  display: flex;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.container .top > div{
+  margin-top: 5vh;
+}
+
+
+.top button mat-icon, mat-label{
+  color: white;
+}
+
+mat-label{
+  font-size: 1rem;
+  padding-left: 2vw;
+}
+
+mat-label:focus{
+  color: #f89646;
+}
+
+.top > div > button{
+  border: 2px solid #F89646 !important;
+}
+
+
+.container .top .send-mail input{
+  width: 30vw;
+  height: 3.5vh;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 2vh;
+  margin-left: 5vw;
+}
+
+@media(max-width: 1050px){
+  .container .top {
+    width: fit-content;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media(max-width: 450px){
+  .top{
+    flex-direction: column;
+    text-align: center;
+  }
 }

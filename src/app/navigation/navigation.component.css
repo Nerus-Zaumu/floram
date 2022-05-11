@@ -1,0 +1,105 @@
+.navbar {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
+}
+
+.navbar .left {
+  width: 30%;
+}
+
+.left mat-label {
+  color: black;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 1.7rem;
+}
+
+.navbar .right {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: auto;
+}
+
+.navbar .right a {
+  text-decoration: none;
+  color: gray;
+  font-family: sans-serif;
+}
+
+.right .dropdown-holder #menu-btn, .right .dropdown {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .right .dropdown-holder {
+    margin-left: auto;
+  }
+  .right .dropdown-holder #menu-btn {
+    display: block;
+    margin-left: auto;
+    margin-top: auto;
+  }
+  .right a {
+    display: none;
+  }
+  .right > .dropdown-holder > button:focus + .dropdown {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: gray;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    background-color: whitesmoke;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+  }
+  .right > .dropdown-holder > .dropdown > .dropdown-menu > a:hover {
+    color: blueviolet;
+  }
+  .right .dropdown .dropdown-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+  .right .dropdown-holder .dropdown .dropdown-menu a {
+    text-decoration: none;
+    display: block;
+    font-size: 1.3rem;
+    line-height: 4vh;
+  }
+}
+/*# sourceMappingURL=navigation.component.css.map */

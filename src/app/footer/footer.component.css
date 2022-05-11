@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #274035;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+.container .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .top > div {
+  margin-top: 5vh;
+}
+
+.top button mat-icon, mat-label {
+  color: white;
+}
+
+mat-label {
+  font-size: 1rem;
+  padding-left: 2vw;
+}
+
+mat-label:focus {
+  color: #f89646;
+}
+
+.top > div > button {
+  border: 2px solid #F89646 !important;
+}
+
+.container .top .send-mail input {
+  width: 30vw;
+  height: 3.5vh;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 2vh;
+  margin-left: 5vw;
+}
+
+@media (max-width: 1050px) {
+  .container .top {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 450px) {
+  .top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=footer.component.css.map */
