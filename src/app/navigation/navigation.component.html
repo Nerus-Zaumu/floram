@@ -3,7 +3,8 @@
     <mat-label>FLORAM</mat-label>
   </div>
   <div class="right">
-    <a routerLink="/home">HOME</a>
+    <a routerLink="/" routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}">HOME</a>
     <a routerLink="/about">ABOUT</a>
     <a routerLink="/fruits">FRUITS</a>
     <a routerLink="/blog">BLOG</a>
@@ -13,7 +14,7 @@
       <div class="dropdown">
         <div class="dropdown-menu">
           <button mat-button><mat-icon>clear</mat-icon></button>
-          <a routerLink="/home">HOME</a>
+          <a routerLink="/">HOME</a>
           <a routerLink="/about">ABOUT</a>
           <a routerLink="/fruits">FRUITS</a>
           <a routerLink="/blog">BLOG</a>

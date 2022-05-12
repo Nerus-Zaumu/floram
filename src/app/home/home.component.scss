@@ -1,5 +1,134 @@
 .container{
+  width: 85%;
+  margin: auto;
+}
+
+
+
+ .marquee-content{
+  padding-top: 5vh;
+  width: 100%;
+  display: flex;
+  opacity: 0.8;
+  transition: opacity 3s ease-in-out;
+}
+
+.marquee-content:hover{
+  opacity: 1;
+}
+
+.marquee-content .right{
+  width: 60%;
+  margin: auto;
+}
+
+.marquee-content .left{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.left > .title{
+  width: 50%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.right img{
   width: 100%;
   height: 100%;
-  background-color: red;
+}
+
+.box img{
+  object-fit: contain;
+}
+
+#green{
+  background-color: #4E7F6A;
+}
+
+#orange{
+  background-color: #F89646;
+}
+
+button{
+  color: white;
+  width: 120px;
+  margin-right: 3vh;
+}
+
+p{
+  font-size: 1.5rem;
+  color: gray;
+  font-family: 2rem;
+  line-height: 100%;
+}
+
+.middle{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.m-left, .m-right{
+  width: 45%;
+}
+
+.m-left img{
+  width: 100%;
+  height: 100%;
+}
+
+.test{
+  object-fit: contain;
+}
+
+.m-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.m-right img{
+  width: 100%;
+  height: 50%;
+}
+
+#paw{
+  padding-top: 5vh;
+}
+
+.test1{
+  object-fit: contain;
+}
+
+@media(max-width: 850px){
+  .marquee-content{
+    flex-direction: column;
+  }
+
+  .marquee-content .left,
+  .marquee-content .right{
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media(max-width: 515px){
+  .middle{
+    flex-direction: column;
+  }
+
+  .middle > div{
+    width: 90%;
+    margin: auto;
+  }
+  #paw{
+    padding-top: 1vh;
+  }
 }

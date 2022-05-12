@@ -1,0 +1,55 @@
+.container{
+  width: 100%;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.container h1,
+.container h3{
+  text-align: center;
+}
+
+.cards{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.cards > mat-card{
+  width: 30%;
+  text-align: center;
+  margin: 2px;
+  background-color: white;
+  color: black;
+}
+
+hr{
+  color: gray;
+}
+
+.cards > mat-card .box img{
+  width: 100%;
+  height: 100%;
+}
+
+.cards > mat-card .box1{
+  object-fit: contain;
+}
+
+@media(max-width: 850px){
+  .cards mat-card{
+    width: 80%;
+    margin: auto;
+  }
+}
+
+button{
+  color: white;
+  background-color: #4E7F6A;
+  margin-top: 3vh;
+}

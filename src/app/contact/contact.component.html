@@ -1,1 +1,48 @@
-<p>contact works!</p>
+<div class="container">
+  <h1>Get in touch</h1>
+  <div class="form-map">
+    <div class="form">
+      <form [formGroup]="userService.contactForm">
+        <input formControlName="$key" type="hidden">
+        <mat-form-field>
+          <input
+          matInput
+          type="text"
+          placeholder="Your Name"
+          formControlName="clientName"
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input
+          matInput
+          type="text"
+          placeholder="Phone Number"
+          formControlName="telephone"
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input
+          matInput
+          type="email"
+          placeholder="Email"
+          formControlName="clientEmail"
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <textarea
+          matInput
+          type="text"
+          placeholder="Message"
+          formControlName="message"
+          ></textarea>
+        </mat-form-field>
+      </form>
+      <div class="btn">
+        <button mat-button>SEND</button>
+      </div>
+    </div>
+    <div class="map box">
+      <img src="assets/images/map.png" alt="Map">
+    </div>
+  </div>
+</div>

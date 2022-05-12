@@ -1,5 +1,5 @@
 .navbar{
-  width: 85%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   background-color: whitesmoke;
@@ -54,8 +54,20 @@
 
   .right > .dropdown-holder > button:focus + .dropdown{
     position: absolute;
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    color: gray;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    background-color: whitesmoke;
+    width: fit-content;
+    height: fit-content;
+    // pointer-events: auto;
+    text-align: center;
+  }
+
+  .right > .dropdown-holder > button:touch-action + .dropdown{
+    position: absolute;
+    display: inline-block;
     color: gray;
     font-size: 1.5rem;
     font-family: sans-serif;
@@ -71,8 +83,9 @@
   }
 
   .right .dropdown .dropdown-menu{
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+    overflow: auto;
+    z-index: 1;
     margin: auto;
     width: 100%;
     height: 100%;

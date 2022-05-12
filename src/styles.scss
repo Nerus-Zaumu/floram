@@ -7,11 +7,16 @@ body {
   padding: 0px;
   border: 0px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #EBF3FA;
   }
 
   body > *{
     margin: 0px;
     padding: 0px;
     border: 0px;
+  }
+
+  .active{
+    color: #f89646;
   }
 
