@@ -73,6 +73,12 @@ p {
   line-height: 100%;
 }
 
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 100%;
+}
+
 .middle {
   width: 85%;
   margin: auto;

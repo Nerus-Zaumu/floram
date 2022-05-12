@@ -49,12 +49,11 @@ button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 28vh;
   -ms-grid-column-align: center;
       justify-self: center;
   margin-top: 15%;
+  overflow: scroll;
 }
 
 .container .right h1 {

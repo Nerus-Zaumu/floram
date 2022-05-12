@@ -43,9 +43,10 @@ button{
 
 .right-content{
   width: fit-content;
-  height: fit-content;
+  height: 28vh;
   justify-self: center;
   margin-top: 15%;
+  overflow: scroll;
 }
 
 .container .right h1{

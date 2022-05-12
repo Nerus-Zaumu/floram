@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
+  blogEntirety1: boolean = false;
+  blogEntirety2: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

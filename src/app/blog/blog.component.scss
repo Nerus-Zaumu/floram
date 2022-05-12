@@ -38,7 +38,15 @@ mat-card button{
 }
 
 mat-card mat-card-footer{
+  height: 32vh;
   background-color: #4E7F6A;
+  overflow: scroll;
+}
+
+@media(max-width: 1500px){
+  mat-card mat-card-footer{
+    height: 18vh;
+  }
 }
 
 .footer-content{
