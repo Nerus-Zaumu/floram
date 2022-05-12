@@ -97,5 +97,20 @@
     font-size: 1.3rem;
     line-height: 4vh;
   }
+
+  .right > button{
+    margin-left: auto;
+  }
+}
+
+.nav-btns{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.right mat-icon{
+  color: #F89646;
+  font-size: 32px;
 }
 

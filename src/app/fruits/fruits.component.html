@@ -2,72 +2,22 @@
     <h1>Our Fruits</h1>
     <h3>which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't an</h3>
     <div class="cards">
-      <mat-card>
+      <mat-card *ngFor="let fruit of fruitInfo">
         <mat-card-content class="box box1">
-          <img src="assets/images/p1.png">
+          <img [src]="fruit.image">
         </mat-card-content>
         <mat-card-footer>
-          <p>⭐⭐⭐⭐⭐</p>
+          <button mat-button class="star"><mat-icon>star</mat-icon></button>
+          <button mat-button class="star"><mat-icon>star</mat-icon></button>
+          <button mat-button class="star"><mat-icon>star</mat-icon></button>
+          <button mat-button class="star"><mat-icon>star</mat-icon></button>
+          <button mat-button class="star"><mat-icon>star</mat-icon></button>
           <hr>
-          <h2>Orange</h2>
-          <h2>$10</h2>
+          <h2>{{ fruit.name }}</h2>
+          <h2>${{ fruit.price }}</h2>
+          <button mat-raised-button (click)="userService.incrementCartValue()">Add to Cart</button>
         </mat-card-footer>
       </mat-card>
-      <mat-card>
-        <mat-card-content class="box box1">
-          <img src="assets/images/p2.png">
-        </mat-card-content>
-        <mat-card-footer>
-          <p>⭐⭐⭐⭐⭐</p>
-          <hr>
-          <h2>Durian</h2>
-          <h2>$10</h2>
-        </mat-card-footer>
-      </mat-card>
-      <mat-card>
-        <mat-card-content class="box box1">
-          <img src="assets/images/p3.png">
-        </mat-card-content>
-        <mat-card-footer>
-          <p>⭐⭐⭐⭐⭐</p>
-          <hr>
-          <h2>Kiwi</h2>
-          <h2>$10</h2>
-        </mat-card-footer>
-      </mat-card>
-      <mat-card>
-        <mat-card-content class="box box1">
-          <img src="assets/images/p4.png">
-        </mat-card-content>
-        <mat-card-footer>
-          <p>⭐⭐⭐⭐⭐</p>
-          <hr>
-          <h2>Mango</h2>
-          <h2>$10</h2>
-        </mat-card-footer>
-      </mat-card>
-      <mat-card>
-        <mat-card-content class="box box1">
-          <img src="assets/images/p5.png">
-        </mat-card-content>
-        <mat-card-footer>
-          <p>⭐⭐⭐⭐⭐</p>
-          <hr>
-          <h2>Banana</h2>
-          <h2>$10</h2>
-        </mat-card-footer>
-      </mat-card>
-      <mat-card>
-        <mat-card-content class="box box1">
-          <img src="assets/images/p6.png">
-        </mat-card-content>
-        <mat-card-footer>
-          <p>⭐⭐⭐⭐⭐</p>
-          <hr>
-          <h2>Apple</h2>
-          <h2>$10</h2>
-        </mat-card-footer>
-      </mat-card>
-      <button mat-button routerLink="/fruits">View More</button>
     </div>
+    <button mat-button routerLink="/fruits" id="view-more">View More</button>
 </div>

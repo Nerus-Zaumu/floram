@@ -13,7 +13,8 @@
       <mat-label tabindex="1">johndoe@gmail.com</mat-label>
     </div>
     <div class="send-mail">
-      <input type="email">
+      <input type="email" placeholder="Email" #footerVal>
+      <button mat-button (click)="tempSwitchToContact()"><mat-icon>arrow_right_alt</mat-icon></button>
     </div>
   </div>
   <div class="middle">

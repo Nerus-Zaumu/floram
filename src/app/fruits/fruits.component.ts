@@ -1,4 +1,6 @@
+import { UserService } from './../shared/user.service';
 import { Component, OnInit } from '@angular/core';
+import { Fruit } from '../shared/fruit';
 
 @Component({
   selector: 'app-fruits',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FruitsComponent implements OnInit {
 
-  constructor() { }
+  colourState: boolean = false;
+
+  constructor(public userService: UserService) { }
+
+  fruitInfo: Fruit[] = [];
 
   ngOnInit(): void {
+    this.userService.createFruits();
+    this.fruitInfo = this.userService.dataSource
+  }
+
+  starColourChanger(){
+    this.colourState = !this.colourState;
   }
 
 }

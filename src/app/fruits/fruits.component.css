@@ -12,6 +12,10 @@ h1 {
   text-align: center;
 }
 
+mat-card > * {
+  height: 50%;
+}
+
 .cards {
   width: 85%;
   margin: auto;
@@ -37,14 +41,14 @@ hr {
   color: gray;
 }
 
-.cards > mat-card .box img {
+.cards > mat-card > .box img {
   width: 100%;
   height: 100%;
 }
 
-.cards > mat-card .box1 {
-  -o-object-fit: contain;
-     object-fit: contain;
+.cards > mat-card > .box1 {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 @media (max-width: 850px) {
@@ -54,9 +58,25 @@ hr {
   }
 }
 
-button {
+#view-more {
   color: white;
   background-color: #4E7F6A;
-  margin-top: 3vh;
+  margin-left: 46%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+mat-card button {
+  background-color: #F89646;
+}
+
+mat-card-footer .star {
+  color: #4E7F6A;
+  background-color: transparent;
+}
+
+mat-card-footer .starStyle {
+  color: #F89646;
 }
 /*# sourceMappingURL=fruits.component.css.map */
