@@ -1,6 +1,7 @@
 import { Fruit } from './fruit';
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +34,8 @@ fruitNames: string[] = [
   dataSource: Fruit[] = [];
   newFruit!: Fruit;
 
+  fruitsToBeInserted: {name: string, image: string, price: number, stock: number}[] = [];
+
 
   contactForm: FormGroup = new FormGroup({
     $key: new FormControl(null),
@@ -41,6 +44,8 @@ fruitNames: string[] = [
     clientEmail: new FormControl(this.footerEmail, [Validators.required, Validators.email]),
     message: new FormControl('Message')
   });
+
+  constructor(private http: HttpClient) { }
 
   createFruits(){
    for(let fruit of this.fruitImages){
@@ -57,5 +62,4 @@ fruitNames: string[] = [
     this.cardVal++
   }
 
-  constructor() { }
 }

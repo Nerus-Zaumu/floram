@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BlogComponent } from './blog/blog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgMarqueeModule } from 'ng-marquee';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NgMarqueeModule } from 'ng-marquee';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    NgMarqueeModule
+    NgMarqueeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -27,15 +27,16 @@
   margin-left: auto;
 }
 
-.navbar .right a{
+.navbar .right > a{
   text-decoration: none;
   color: gray;
   font-family: sans-serif;
 }
 
-.right .dropdown-holder #menu-btn, .right .dropdown{
+.right .dropdown-holder #menu-btn, .right > .dropdown-holder > .nav-btns > .dropdown{
   display: none;
 }
+
 
 @media(max-width: 991px){
   .right .dropdown-holder{
@@ -48,38 +49,32 @@
     margin-top: auto;
   }
 
-  .right a{
+  .right > a{
     display: none;
   }
 
-  .right > .dropdown-holder > button:focus + .dropdown{
+  .right > .dropdown-holder > .nav-btns > #menu-btn:focus + .dropdown{
     position: absolute;
     display: inline-block;
     color: gray;
     font-size: 1.5rem;
     font-family: sans-serif;
     background-color: whitesmoke;
-    width: fit-content;
-    height: fit-content;
-    // pointer-events: auto;
+    width: 30%;
+    z-index: 999;
+    height: 50%;
+    transform: translateY(22vh);
+    pointer-events: auto;
     text-align: center;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    cursor: pointer;
   }
 
-  .right > .dropdown-holder > button:touch-action + .dropdown{
-    position: absolute;
-    display: inline-block;
-    color: gray;
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    background-color: whitesmoke;
-    width: fit-content;
-    height: fit-content;
-    // pointer-events: auto;
-    text-align: center;
-  }
-
-  .right > .dropdown-holder > .dropdown > .dropdown-menu > a:hover{
-    color: blueviolet;
+  .right > .dropdown-holder > .nav-btns > .dropdown > .dropdown-menu > a{
+    cursor: pointer;
+    pointer-events: all;
+    line-height: 8vh;
   }
 
   .right .dropdown .dropdown-menu{
@@ -114,3 +109,10 @@
   font-size: 32px;
 }
 
+@media(max-width: 450px){
+  .right > .dropdown-holder > .nav-btns > #menu-btn:focus + .dropdown{
+    width: 100%;
+    height: 100%;
+    transform: translateX(-30vw) translateY(45vh);
+  }
+}

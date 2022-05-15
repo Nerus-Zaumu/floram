@@ -12,16 +12,16 @@
     <div class="dropdown-holder">
       <div class="nav-btns">
         <button mat-button><mat-label>{{ userService.cardVal }}</mat-label><mat-icon>shopping_cart</mat-icon></button>
-        <button id="menu-btn" mat-button tabindex="1"><mat-icon>menu</mat-icon></button>
-      </div>
-      <div class="dropdown">
-        <div class="dropdown-menu">
-          <button mat-button><mat-icon>clear</mat-icon></button>
-          <a routerLink="/">HOME</a>
-          <a routerLink="/about">ABOUT</a>
-          <a routerLink="/fruits">FRUITS</a>
-          <a routerLink="/blog">BLOG</a>
-          <a routerLink="/contact-us">CONTACT US</a>
+        <button id="menu-btn" mat-button (click)="closeDropdown()"><mat-icon>menu</mat-icon></button>
+        <div class="dropdown" #dropdown>
+          <div class="dropdown-menu">
+            <button mat-button><mat-icon>clear</mat-icon></button>
+            <a routerLink="/">HOME</a>
+            <a routerLink="/about">ABOUT</a>
+            <a routerLink="/fruits">FRUITS</a>
+            <a routerLink="/blog">BLOG</a>
+            <a routerLink="/contact-us">CONTACT US</a>
+          </div>
         </div>
       </div>
     </div>

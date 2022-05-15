@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  BASE_URL: 'https://console.firebase.google.com/u/0/project/floram-20ac7/database/floram-20ac7-default-rtdb/data/~2F',
+  WEB_API_KEY: 'AIzaSyAFGUYAWJT6oUN9nyLF_79Jh8vrZexncXw'
 };
 
 /*
