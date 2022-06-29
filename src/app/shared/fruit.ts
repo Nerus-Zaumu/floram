@@ -1,5 +1,7 @@
 export interface Fruit {
-  image: string,
+  image_url: string,
   name: string,
-  price: number;
+  price?: number,
+  stock?: number,
+  proto?: Object
 }

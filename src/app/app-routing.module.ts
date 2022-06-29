@@ -11,7 +11,8 @@ const routes: Routes = [
   {path: "fruits", component: FruitsComponent},
   {path: "about", component: AboutComponent},
   {path: "blog", component: BlogComponent},
-  {path: "contact-us", component: ContactComponent}
+  {path: "contact-us", component: ContactComponent},
+  { path: 'fruiter', loadChildren: () => import('./modules/fruits/fruits.module').then(m => m.FruitsModule) }
 ];
 
 @NgModule({

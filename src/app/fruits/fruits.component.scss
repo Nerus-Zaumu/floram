@@ -52,11 +52,12 @@ hr{
   }
 }
 
-#view-more{
+#view-more, #view-less{
   color: white;
   background-color: #4E7F6A;
   margin-left: 46%;
   align-self: center;
+  margin-bottom: 1%;
 }
 
 mat-card button{
@@ -73,4 +74,7 @@ mat-card-footer .starStyle{
   color: #F89646;
 }
 
+.star-toggle{
+  color: #F89646;
+}
 

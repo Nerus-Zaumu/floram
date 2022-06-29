@@ -4,14 +4,14 @@
     <div class="cards">
       <mat-card *ngFor="let fruit of fruitInfo">
         <mat-card-content class="box box1">
-          <img [src]="fruit.image">
+          <img [src]="fruit.image_url">
         </mat-card-content>
         <mat-card-footer>
-          <button mat-button class="star"><mat-icon>star</mat-icon></button>
-          <button mat-button class="star"><mat-icon>star</mat-icon></button>
-          <button mat-button class="star"><mat-icon>star</mat-icon></button>
-          <button mat-button class="star"><mat-icon>star</mat-icon></button>
-          <button mat-button class="star"><mat-icon>star</mat-icon></button>
+          <button mat-button class="star star-toggle" (click)="userService.toggleRating('star-one', 'star-toggle')"><mat-icon id="star-one">star</mat-icon></button>
+          <button mat-button class="star" (click)="userService.toggleRating('star-two', 'star-toggle')"><mat-icon id="star-two">star</mat-icon></button>
+          <button mat-button class="star"><mat-icon id="star-three" (click)="userService.toggleRating('star-three', 'star-toggle')">star</mat-icon></button>
+          <button mat-button class="star"><mat-icon id="star-four" (click)="userService.toggleRating('star-four', 'star-toggle')">star</mat-icon></button>
+          <button mat-button class="star"><mat-icon id="star-five" (click)="userService.toggleRating('star-five', 'star-toggle')">star</mat-icon></button>
           <hr>
           <h2>{{ fruit.name }}</h2>
           <h2>${{ fruit.price }}</h2>
@@ -19,5 +19,6 @@
         </mat-card-footer>
       </mat-card>
     </div>
-    <button mat-button routerLink="/fruits" id="view-more">View More</button>
+    <button mat-button id="view-more" (click)="incrementController()">View More</button>
+    <button mat-button id="view-less" (click)="decrementController()">View Less</button>
 </div>

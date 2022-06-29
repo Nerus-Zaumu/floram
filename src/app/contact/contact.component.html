@@ -38,7 +38,7 @@
         </mat-form-field>
       </form>
       <div class="btn">
-        <button mat-button>SEND</button>
+        <button mat-button (click)="userService.sendMail()" [disabled]="userService.contactForm.invalid">SEND</button>
       </div>
     </div>
     <div class="map box">

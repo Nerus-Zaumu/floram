@@ -14,14 +14,35 @@ export class FruitsComponent implements OnInit {
   constructor(public userService: UserService) { }
 
   fruitInfo: Fruit[] = [];
+  displayController: number = 6
+  workingFruits: Fruit[] = []
 
   ngOnInit(): void {
-    this.userService.createFruits();
-    this.fruitInfo = this.userService.dataSource
+    this.userService.getAllFruits();
+    this.workingFruits = this.userService.fruitDataSource.slice(0, this.displayController)
+    this.fruitInfo = this.workingFruits
   }
 
   starColourChanger(){
     this.colourState = !this.colourState;
+  }
+
+  incrementController(){
+    if(this.displayController < this.userService.fruitDataSource.length){
+      this.displayController += 6
+      this.userService.getAllFruits();
+      this.workingFruits = this.userService.fruitDataSource.slice(0, this.displayController)
+      this.fruitInfo = this.workingFruits
+    }
+  }
+
+  decrementController(){
+    if(this.displayController < this.userService.fruitDataSource.length && this.displayController >= 6){
+      this.displayController -= 6
+      this.userService.getAllFruits();
+      this.workingFruits = this.userService.fruitDataSource.slice(0, this.displayController)
+      this.fruitInfo = this.workingFruits
+    }
   }
 
 }
